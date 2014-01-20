@@ -538,12 +538,6 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   background-color: #f9f9f9 !important;
 }
 
-/* Hide Promoted tweets */
-.promoted-tweet {
-  display: none !important;
-}
-
-
 /*
  * Inline content
  */

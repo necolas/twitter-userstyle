@@ -619,6 +619,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   display: none !important;
 }
 
+
 .tweet .stream-item-header .context {
   margin: 0 0 5px;
 }
@@ -627,3 +628,304 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   margin-left: 48px;
 }
 
+/*
+ * Fix permalink
+ */
+
+.permalink-tweet-container .tweet .stream-item-footer {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.permalink-tweet-container .tweet .tweet-actions .Icon,
+.permalink-tweet-container .tweet-actions .with-icn {
+  font-size: inherit !important;
+}
+
+.permalink-footer {
+  position:relative;
+}
+
+/* Super dirty hacks to rearrange stats numbers */
+
+.permalink-tweet-container .tweet .stats a {
+  text-indent: -200px;
+  position: absolute;
+  top: 0;
+}
+
+.permalink-tweet-container .tweet .stats li {
+  margin:0;
+  width: auto;
+  border: 0;
+}
+
+.permalink-tweet-container .tweet-stats-container .request-retweeted-popup strong,
+.permalink-tweet-container .tweet-stats-container .request-favorited-popup strong {
+  display: block;
+  text-indent: 0;
+  position: absolute;
+  top: -30px;
+  font-size: 16px !important;
+  left: 87px;
+  color: inherit !important;
+}
+
+.permalink-tweet-container .tweet-stats-container .request-favorited-popup strong {
+  left: 153px;
+}
+
+.permalink-tweet-container .tweet .tweet-actions .retweet {
+  position: relative;
+  top: -1px;
+}
+
+.permalink-tweet-container .tweet .tweet-actions .retweet,
+.permalink-tweet-container .tweet .tweet-actions .favorite {
+  margin-right: 18px;
+}
+
+/*
+ * Hide avatar row of social proof, and all expando tweets
+ */
+
+.permalink-tweet-container .tweet .stats .avatar-row,
+.stream .tweet-details-fixer,
+.stream:not(.permalink-stream) .simple-tweet.descendant,
+.stream .view-more-while-expanding,
+.expanded-conversation > li:not(.original-tweet-container) {
+  display: none;
+}
+
+.stream-item.open,
+.stream-item.before-expanded,
+.stream-item.after-expanded {
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.stream-item.open,
+.stream-item.before-expanded {
+  border-bottom: 0 !important;
+}
+
+.stream-item.after-expanded {
+  border-top: 0 !important;
+  border-bottom: 0 !important;
+}
+
+.tweet-actions {
+  display: block !important;
+  position: relative !important;
+}
+
+/* Separate more actions button from the core actions */
+
+.more-tweet-actions {
+  position: absolute;
+  right: -10px;
+  margin-top: -2px;
+}
+
+.permalink-tweet-container .more-tweet-actions {
+  margin-top: -10px;
+}
+
+/*
+ * Add blue hue to inline reply tweetbox
+ */
+
+.inline-reply-tweetbox {
+  border-radius: 0 !important;
+  background:rgba(85, 172, 238, 0.2) !important;
+}
+
+/*
+ * Remove user-styled tweet button
+ */
+
+.tweet-btn {
+  background: rgb(85, 172, 238) !important;
+}
+
+.tweet-btn:hover,
+.tweet-btn:focus {
+  background: rgb(44, 150, 231) !important;
+}
+
+.permalink {
+  background: white;
+}
+
+.tweet:hover .tweet-actions a,
+.tweet:hover .tweet-actions .btn-link {
+  color: rgb(204, 214, 221) !important;
+}
+
+.tweet-actions a:hover,
+.tweet-actions .btn-link:hover,
+.tweet:hover .tweet-actions a:hover,
+.tweet:hover .tweet-actions .btn-link:hover {
+   color: #999 !important;
+}
+
+/*
+ * Hack to disable expando behaviour and allow the timestamp link to expand to fill the tweet (behind other content)
+ */
+
+.stream .tweet {
+  pointer-events: none;
+  z-index:0;
+}
+
+/*
+ * Hack to move a hovered tweet up the stack and ensure the "more actions" menu
+ * renders above subsequent tweets, because of the hack being used to kill
+ * expando.
+ */
+
+.stream .tweet:hover {
+  background: transparent;
+  z-index: 1;
+}
+
+/*
+ * Re-enable pointer events for various bits and pieces
+ */
+
+.stream .tweet a,
+.stream .tweet .btn-link,
+.stream .tweet-actions a,
+.stream .more-tweet-actions {
+  pointer-events: auto;
+}
+
+/*
+ * Stretch timestamp over entire tweet, and push below other content.
+ * Acts as if clicking the tweet took you to the permalink instead of expanding.
+ */
+
+.stream .tweet .tweet-timestamp {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  padding: 14px 12px;
+}
+
+.stream .tweet:hover .tweet-timestamp {
+  background: #f9f9f9;
+}
+
+.permalink .stream .tweet .tweet-timestamp {
+  padding-right: 50px !important;
+}
+
+.stream-item-header .translate-button {
+  margin-top: 2px;
+  margin-right: 25px;
+}
+
+.embed-stats-url-link {
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.embed-stats-row {
+  margin-bottom: 10px;
+}
+
+/*
+ * Fixes for crazy conversation line code
+ */
+
+.conversation-module > li:after,
+.conversation-module > li:before {
+  border-radius: 0;
+  z-index: 2;
+}
+
+.conversation-module .conversation-root:after {
+  top: 67px;
+  z-index: 2;
+}
+
+.conversation-module > li:before {
+  top: -1px;
+  bottom: auto;
+  height: 13px;
+  z-index: 2;
+}
+
+.conversation-module>li:after {
+  top: 64px;
+  bottom: -4px;
+  z-index: 2;
+}
+
+/*
+ * Photo images in tweets
+ */
+
+.stream .cards-media-container {
+  margin-bottom:10px;
+}
+
+.cards-base .media {
+  display: block;
+  background: black;
+}
+
+.cards-base .media img {
+  display: block;
+  margin: 0 auto;
+}
+
+/*
+ * Fix user dropdown button
+ */
+
+.user-dropdown {
+  border: 1px solid #ccc !important;
+  padding: 1px 5px 0;
+}
+
+.user-dropdown .Icon {
+  font-size: 24px;
+}
+
+.with-media-forward .cards-base .media-forward {
+  border-radius: 0;
+}
+
+/*
+ * Remove user styles from dropdown menu links
+ */
+
+.dropdown-menu li > a,
+.dropdown-menu .dropdown-link {
+  color: #66757F !important;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu .dropdown-link:hover,
+.dropdown .account-group:hover .fullname,
+.dropdown .account-group:hover .metadata {
+  color: #fff !important;
+}
+
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-menu .dropdown-link:hover,
+.dropdown-menu .dropdown-link:focus,
+.dropdown-menu li:hover .dropdown-link,
+.dropdown-menu li:focus .dropdown-link,
+.dropdown-menu .typeahead-recent-search-item.selected,
+.dropdown-menu .typeahead-saved-search-item.selected,
+.dropdown-menu .selected a,
+.dropdown-menu .dropdown-link.selected {
+  background: #55ACEE !important;
+}

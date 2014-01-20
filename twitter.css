@@ -269,7 +269,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 .rosetta .dm-tweetbox,
 .rosetta .WebNotification-buffer--altColor,
 .content-main .conversations-enabled .expansion-container .inline-reply-tweetbox {
-  background-color: #f9f9f9 !important;
+  background:rgba(85, 172, 238, 0.2) !important;
 }
 
 .home-tweet-box {
@@ -277,7 +277,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 }
 
 .tweet-box[contenteditable="true"] {
-  border-color: #ddd !important;
+  border-color: #c2deed !important;
 }
 
 /* Outright hide WTF */
@@ -387,6 +387,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 }
 
 /* New tweets loading bar */
+
 .new-tweets-bar {
   margin-right: -1px !important;
   margin-left: -1px !important;

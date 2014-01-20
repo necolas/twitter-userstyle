@@ -193,24 +193,27 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   border: 0 !important;
   opacity: 1 !important;
 }
+
 #global-new-tweet-button:hover {
   color: #fff !important;
 }
 
-
 /* Search field */
+
 .global-nav .form-search .search-input {
   font-size: 13px !important;
   line-height: 18px !important; /* Vertically center the text */
-  color: #81c1f2 !important;
+  color: #fff !important;
   background-color: #3886c1 !important;
   opacity: 1 !important;
 }
+
 .global-nav .form-search .search-input:placeholder {
   color: #81c1f2 !important;
 }
 
 /* Make body match topbar */
+
 .wrapper,
 .wrapper-narrow {
   padding-top: 60px !important;

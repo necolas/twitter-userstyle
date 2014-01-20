@@ -618,3 +618,12 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 .stream .recent-tweets .tweet-actions {
   display: none !important;
 }
+
+.tweet .stream-item-header .context {
+  margin: 0 0 5px;
+}
+
+.conversation-module .conversation-header .content {
+  margin-left: 48px;
+}
+

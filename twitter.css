@@ -331,7 +331,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 }
 
 .stats a {
-  color: #99aab5 !important;
+  color: #bbb !important;
 }
 
 .stats a strong {
@@ -488,8 +488,9 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 }
 
 /* Hide the details to make room for the tweet actions */
-.tweet .details,
-.client-and-actions {
+
+.stream .tweet .details,
+.stream .client-and-actions {
   display: none !important;
 }
 

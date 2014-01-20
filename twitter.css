@@ -423,9 +423,6 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   display: none !important;
 }
 
-.tweet .stream-item-footer {
-  max-height: 24px !important;
-}
 .tweet .bottom-tweet-actions {
   height: 24px !important;
   margin-top: 5px !important;
@@ -448,7 +445,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 /* Tweet actions */
 
 .tweet-actions {
-  position: static !important;
+  position: relative !important;
   float: none !important;
   padding-left: 0 !important;
   margin-left: -10px !important;
@@ -620,15 +617,18 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 }
 
 /* Reset the profile header in a modal */
+
 #profile_popup-dialog .profile-card.profile-header {
   width: 520px !important;
   padding-top: 0 !important;
 }
+
 #profile_popup-dialog .profile-card.profile-header .profile-header-inner {
   position: static !important;
 }
 
 /* Hide tweet actions in recent tweets */
-.recent-tweets .tweet-actions {
+
+.stream .recent-tweets .tweet-actions {
   display: none !important;
 }

@@ -525,18 +525,10 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   width: 16px !important;
   text-align: center !important;
 }
-.activity-type .Icon--retweeted:before,
-.context .with-icn .Icon--retweeted:before {
-  content: "\f152" !important;
-}
+
 .activity-type .Icon--favorited:before,
 .context .with-icn .Icon--favorited:before {
-  content: "\f147" !important;
   color: #ffcc4d !important;
-}
-.activity-type .Icon--follower:before,
-.context .with-icn .Icon--follower:before {
-  content: "\f056" !important;
 }
 
 /* Permalinks */

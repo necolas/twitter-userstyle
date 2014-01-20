@@ -511,7 +511,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 .vellip:after,
 .conversation-module > li:after,
 .conversation-module > li:before {
-  background-color: #99aab5 !important;
+  background-color: #ccc !important;
 }
 
 /* Don't use inverted icons for Activity feed */

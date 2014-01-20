@@ -62,37 +62,6 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   color: #fff !important;
 }
 
-
-/*
- * Buttons
- */
-
-/* Commented out for now while I work on improving this stuff
-
-.btn:not(.plain-btn):not(.follow-button) {
-  color: #fff !important;
-  background-color: #55acee !important;
-  background-image: none !important;
-  border-color: #55acee !important;
-}
-.btn:focus {
-  box-shadow: none !important;
-}
-.btn .Icon {
-  color: inherit !important;
-}
-*/
-
-
-/*
- * Undo overzealous focus state
- */
-
-.selected-stream-item:focus {
-  box-shadow: none !important;
-}
-
-
 /*
  * Undo blocks of accent color bullshit
  */

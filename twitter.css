@@ -491,13 +491,6 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   display: none !important;
 }
 
-/* Reapply tweet stats borders */
-
-.tweet .stats {
-  border-top: 1px solid #eee !important;
-  border-bottom: 1px solid #eee !important;
-}
-
 /* Hide the inline replies caret */
 
 .inline-reply-caret {
@@ -646,12 +639,45 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   position:relative;
 }
 
+.permalink-tweet .stream-item-footer {
+  position: absolute;
+  bottom: 105px;
+  left: 50px;
+  right: 50px;
+  margin: 0;
+  z-index: 2;
+}
+
+.permalink-tweet .tweet-actions {
+  margin-top: 0;
+}
+
+.permalink-footer .cards-base {
+  margin: 20px 0 0;
+  border: 0;
+  padding: 0;
+}
+
+.permalink .client-and-actions {
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  margin-top: 95px;
+}
+
 /* Super dirty hacks to rearrange stats numbers */
+
+.permalink-tweet-container .tweet .stats {
+  border: 0 !important;
+  border: 1px solid transparent !important;
+  overflow: visible !important;
+  height: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
 
 .permalink-tweet-container .tweet .stats a {
   text-indent: -200px;
-  position: absolute;
-  top: 0;
+  font-size: 0;
 }
 
 .permalink-tweet-container .tweet .stats li {
@@ -665,14 +691,14 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   display: block;
   text-indent: 0;
   position: absolute;
-  top: -30px;
+  bottom: 92px;
   font-size: 16px !important;
-  left: 87px;
+  left: 110px;
   color: inherit !important;
 }
 
 .permalink-tweet-container .tweet-stats-container .request-favorited-popup strong {
-  left: 153px;
+  left: 199px;
 }
 
 .permalink-tweet-container .tweet .tweet-actions .retweet {
@@ -680,9 +706,14 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   top: -1px;
 }
 
+.permalink-tweet-container .tweet-actions > li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
 .permalink-tweet-container .tweet .tweet-actions .retweet,
 .permalink-tweet-container .tweet .tweet-actions .favorite {
-  margin-right: 18px;
+  margin-right: 20px;
 }
 
 /*
@@ -729,6 +760,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 
 .permalink-tweet-container .more-tweet-actions {
   margin-top: -10px;
+  right: -30px;
 }
 
 /*
@@ -877,6 +909,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 .cards-base .media {
   display: block;
   background: black;
+  margin: 0;
 }
 
 .cards-base .media img {

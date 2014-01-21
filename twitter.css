@@ -269,7 +269,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 .rosetta .dm-tweetbox,
 .rosetta .WebNotification-buffer--altColor,
 .content-main .conversations-enabled .expansion-container .inline-reply-tweetbox {
-  background:rgba(85, 172, 238, 0.2) !important;
+  background: #F4F8FA !important;
 }
 
 .home-tweet-box {
@@ -409,6 +409,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 
 .tweet {
   border-bottom-color: #eee !important;
+  padding: 5px 15px 10px;
 }
 
 /* Move the time back to the right */
@@ -472,6 +473,13 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   color: #ffcc4d !important;
 }
 
+/* Recolor the retweeted icon */
+
+.retweeted .Icon--retweet,
+.Icon--retweeted {
+  color: #77B255;
+}
+
 /* Hide the text */
 
 .tweet-actions b {
@@ -522,13 +530,6 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 .activity-type .Icon--favorited:before,
 .context .with-icn .Icon--favorited:before {
   color: #ffcc4d !important;
-}
-
-/* Permalinks */
-
-.inline-reply-tweetbox,
-.modal-content .activity-content .stream-item {
-  background-color: #f9f9f9 !important;
 }
 
 /*
@@ -625,6 +626,14 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
  * Fix permalink
  */
 
+.permalink-tweet {
+  padding: 25px 50px;
+}
+
+.permalink .replies-to .tweet {
+  padding-top: 15px;
+}
+
 .permalink-tweet-container .tweet .stream-item-footer {
   font-size: 24px;
   margin: 10px 0;
@@ -641,7 +650,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 
 .permalink-tweet .stream-item-footer {
   position: absolute;
-  bottom: 105px;
+  bottom: 106px;
   left: 50px;
   right: 50px;
   margin: 0;
@@ -711,9 +720,9 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   margin-right: 20px;
 }
 
-.permalink-tweet-container .tweet .tweet-actions .retweet,
-.permalink-tweet-container .tweet .tweet-actions .favorite {
-  margin-right: 20px;
+.permalink-tweet-container .action-rt-container,
+.permalink-tweet-container .action-fav-container {
+  padding-right: 20px;
 }
 
 /*
@@ -769,7 +778,6 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 
 .inline-reply-tweetbox {
   border-radius: 0 !important;
-  background:rgba(85, 172, 238, 0.2) !important;
 }
 
 /*
@@ -845,7 +853,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
   right: 0;
   bottom: 0;
   text-align: right;
-  padding: 14px 12px;
+  padding: 10px 15px;
 }
 
 .stream .tweet:hover .tweet-timestamp {

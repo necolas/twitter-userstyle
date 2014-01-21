@@ -268,7 +268,7 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 .home-tweet-box,
 .rosetta .dm-tweetbox,
 .rosetta .WebNotification-buffer--altColor,
-.content-main .conversations-enabled .expansion-container .inline-reply-tweetbox {
+.inline-reply-tweetbox {
   background: #F4F8FA !important;
 }
 
@@ -969,4 +969,14 @@ s, .pretty-link:hover s, .pretty-link:focus s, .stream-item-activity-me .latest-
 .dropdown-menu .selected a,
 .dropdown-menu .dropdown-link.selected {
   background: #55ACEE !important;
+}
+
+/*
+ * Fix permalink cards
+ */
+
+.card2 {
+  border: 1px #eee solid !important;
+  margin: 20px 0 0 !important;
+  padding: 20px !important;
 }

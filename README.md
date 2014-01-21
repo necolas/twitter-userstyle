@@ -47,7 +47,7 @@ I've disabled issues on this repository. If you'd like to help, submit a pull re
 * Chrome: https://chrome.google.com/webstore/detail/stylish/fjnbnpbmkenffdnngjfgmeleoegfcffe?hl=en
 * Safari: http://code.grid.in.th/
 
-Copy-pasta the styles from `twitter.css` into a new userstyle in your favorite browser. Be sure to specify that it apply to sites beginning with `https://twitter.com`.
+Copy-pasta the styles from `twitter.css` into a new userstyle in your favorite browser. Be sure to specify that it apply to sites that match the regular expression: `https:\/\/twitter.com(?:(?!\/i\/cards).)(.*)`. This avoids stylish applying the CSS to Twitter Card iframes.
 
 #### With custom Chrome extension
 
